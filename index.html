@@ -1,0 +1,4080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SENAFOOD | Her Adımda Daha İyi Hisset</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root{
+    --green:#173f35;
+    --green2:#245d4d;
+    --green3:#dcebe4;
+    --cream:#f8f5ef;
+    --cream2:#f1ece2;
+    --orange:#e98943;
+    --orange2:#f4a261;
+    --white:#fff;
+    --black:#17201d;
+    --gray:#68746f;
+    --border:#e5e3dc;
+    --shadow:0 18px 50px rgba(24,48,40,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    color:var(--black);
+    background:#fff;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:var(--green);
+    color:#fff;
+    text-align:center;
+    padding:9px 15px;
+    font-size:12px;
+    letter-spacing:.4px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    height:84px;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav{
+    height:100%;
+    max-width:1280px;
+    margin:auto;
+    padding:0 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.logo{
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:25px;
+    letter-spacing:-1.5px;
+    color:var(--green);
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.logo-sub{
+    font-size:8px;
+    display:block;
+    letter-spacing:2.5px;
+    color:#7a8580;
+    margin-top:-2px;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+    color:#36433e;
+    transition:.25s;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icon-btn{
+    width:43px;
+    height:43px;
+    border:1px solid var(--border);
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+    top:-4px;
+    right:-2px;
+    width:18px;
+    height:18px;
+    background:var(--orange);
+    color:white;
+    border-radius:50%;
+    font-size:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    background:var(--cream);
+    overflow:hidden;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(233,137,67,.09);
+    right:-160px;
+    top:-100px;
+}
+
+.hero-inner{
+    max-width:1280px;
+    min-height:650px;
+    padding:60px 25px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    align-items:center;
+    gap:50px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-text small{
+    display:inline-block;
+    color:var(--orange);
+    font-size:12px;
+    letter-spacing:2.4px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero-text h1{
+    font-family:'Manrope',sans-serif;
+    color:var(--green);
+    font-size:clamp(45px,5vw,70px);
+    line-height:1.02;
+    letter-spacing:-3.5px;
+    max-width:680px;
+}
+
+.hero-text h1 span{
+    color:var(--orange);
+}
+
+.hero-text p{
+    color:var(--gray);
+    max-width:560px;
+    font-size:17px;
+    line-height:1.8;
+    margin:25px 0 30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    padding:15px 23px;
+    border-radius:5px;
+    font-weight:700;
+    font-size:13px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:var(--green);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0e3028;
+    transform:translateY(-2px);
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:#fff;
+}
+
+.btn-orange:hover{
+    background:#d87531;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    background:#fff;
+    color:var(--green);
+    border:1px solid #ccd7d2;
+}
+
+.btn-outline:hover{
+    border-color:var(--green);
+}
+
+.hero-note{
+    display:flex;
+    gap:25px;
+    margin-top:38px;
+    color:#68746f;
+    font-size:12px;
+}
+
+.hero-note div{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.hero-note strong{
+    color:var(--green);
+}
+
+/* HERO PRODUCT */
+
+.hero-visual{
+    position:relative;
+    height:500px;
+}
+
+.hero-image{
+    width:100%;
+    height:100%;
+    border-radius:20px;
+    background:
+        linear-gradient(135deg,rgba(23,63,53,.08),rgba(233,137,67,.10)),
+        url("https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=1200&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+.floating-card{
+    position:absolute;
+    background:#fff;
+    box-shadow:var(--shadow);
+    border-radius:12px;
+    padding:18px;
+}
+
+.card-rating{
+    bottom:25px;
+    left:-25px;
+    width:200px;
+}
+
+.stars{
+    color:#ed9a42;
+    letter-spacing:2px;
+    margin-bottom:6px;
+}
+
+.card-rating p{
+    font-size:12px;
+    color:#68746f;
+}
+
+.card-info{
+    right:-20px;
+    top:35px;
+    width:185px;
+}
+
+.card-info span{
+    color:#e98943;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.card-info h4{
+    color:var(--green);
+    margin:8px 0 4px;
+}
+
+.card-info p{
+    color:#77827e;
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* =========================
+   TRUST
+========================= */
+
+.trust{
+    max-width:1120px;
+    margin:-35px auto 0;
+    position:relative;
+    z-index:5;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 12px 45px rgba(20,50,40,.10);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.trust-item{
+    padding:23px 18px;
+    display:flex;
+    gap:13px;
+    align-items:center;
+    border-right:1px solid var(--border);
+}
+
+.trust-item:last-child{
+    border:none;
+}
+
+.trust-icon{
+    font-size:25px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:13px;
+    color:var(--green);
+}
+
+.trust-item span{
+    display:block;
+    font-size:11px;
+    color:#7c8783;
+    margin-top:3px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+    padding:100px 25px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-head small{
+    color:var(--orange);
+    letter-spacing:2px;
+    font-weight:800;
+    font-size:11px;
+}
+
+.section-head h2{
+    font-family:'Manrope',sans-serif;
+    font-size:40px;
+    letter-spacing:-1.7px;
+    color:var(--green);
+    margin:10px 0 12px;
+}
+
+.section-head p{
+    max-width:650px;
+    margin:auto;
+    color:var(--gray);
+    line-height:1.7;
+    font-size:15px;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    background:#fff;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.category{
+    height:190px;
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    color:white;
+    background-size:cover;
+    background-position:center;
+}
+
+.category::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 20%,rgba(10,35,29,.82));
+}
+
+.category-content{
+    position:absolute;
+    z-index:2;
+    bottom:20px;
+    left:20px;
+}
+
+.category-content span{
+    font-size:10px;
+    color:#f5c49b;
+    letter-spacing:1px;
+}
+
+.category-content h3{
+    font-size:18px;
+    margin-top:5px;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.shop{
+    background:var(--cream);
+}
+
+.shop-toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:25px;
+    gap:15px;
+}
+
+.filters{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.filter-btn{
+    padding:10px 15px;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:30px;
+    font-size:12px;
+    color:#52605a;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:var(--green);
+    color:white;
+    border-color:var(--green);
+}
+
+.product-count{
+    color:#7b8581;
+    font-size:12px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.product{
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid #e8e5de;
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(24,48,40,.10);
+}
+
+.product.hidden{
+    display:none;
+}
+
+.product-image{
+    height:270px;
+    background:#f0eee8;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product:hover img{
+    transform:scale(1.04);
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    z-index:2;
+    padding:6px 10px;
+    background:var(--orange);
+    color:#fff;
+    font-size:9px;
+    letter-spacing:1px;
+    font-weight:800;
+    border-radius:3px;
+}
+
+.quick{
+    position:absolute;
+    right:14px;
+    top:14px;
+    z-index:2;
+    width:37px;
+    height:37px;
+    background:white;
+    border-radius:50%;
+    border:none;
+    font-size:16px;
+}
+
+.product-info{
+    padding:21px;
+}
+
+.product-category{
+    color:#8a928f;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.product-info h3{
+    font-family:'Manrope',sans-serif;
+    color:var(--green);
+    margin:7px 0;
+    font-size:18px;
+}
+
+.product-info p{
+    color:#6c7772;
+    font-size:12px;
+    line-height:1.6;
+    min-height:40px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:18px;
+}
+
+.price{
+    color:var(--green);
+    font-size:20px;
+    font-weight:800;
+}
+
+.add-cart{
+    background:var(--green);
+    border:none;
+    color:white;
+    padding:10px 14px;
+    border-radius:4px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.add-cart:hover{
+    background:var(--orange);
+}
+
+/* =========================
+   PERSONALIZED
+========================= */
+
+.personal{
+    background:var(--green);
+    color:white;
+    overflow:hidden;
+}
+
+.personal-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:70px;
+    align-items:center;
+}
+
+.personal-text small{
+    color:#f2aa70;
+    letter-spacing:2px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.personal-text h2{
+    font-family:'Manrope',sans-serif;
+    font-size:43px;
+    line-height:1.1;
+    letter-spacing:-2px;
+    margin:12px 0 20px;
+}
+
+.personal-text p{
+    color:#d3e0da;
+    line-height:1.8;
+    font-size:14px;
+}
+
+.personal-points{
+    margin-top:25px;
+}
+
+.personal-point{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:13px 0;
+    font-size:13px;
+}
+
+.check{
+    width:23px;
+    height:23px;
+    border-radius:50%;
+    background:#2e6958;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#f7b276;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-box{
+    background:#fff;
+    color:var(--black);
+    border-radius:12px;
+    padding:32px;
+    box-shadow:0 20px 60px rgba(0,0,0,.18);
+}
+
+.form-progress{
+    display:flex;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.progress-step{
+    width:30px;
+    height:30px;
+    background:#e5eae7;
+    color:#78837e;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.progress-step.active{
+    background:var(--orange);
+    color:white;
+}
+
+.progress-line{
+    height:2px;
+    flex:1;
+    background:#e3e7e4;
+}
+
+.form-step{
+    display:none;
+}
+
+.form-step.active{
+    display:block;
+}
+
+.form-step h3{
+    font-family:'Manrope',sans-serif;
+    color:var(--green);
+    font-size:21px;
+    margin-bottom:5px;
+}
+
+.form-step>p{
+    color:#7b8580;
+    font-size:12px;
+    margin-bottom:22px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.field{
+    margin-bottom:13px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    display:block;
+    color:#53615b;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:6px;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #dfe4e1;
+    border-radius:5px;
+    outline:none;
+    font-size:12px;
+    background:#fbfcfb;
+}
+
+.field input:focus,
+.field select:focus{
+    border-color:var(--green2);
+}
+
+.choice-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+}
+
+.choice{
+    position:relative;
+}
+
+.choice input{
+    position:absolute;
+    opacity:0;
+}
+
+.choice label{
+    border:1px solid #dfe4e1;
+    border-radius:5px;
+    padding:11px 8px;
+    text-align:center;
+    display:block;
+    cursor:pointer;
+    font-size:11px;
+    color:#56635d;
+    transition:.2s;
+}
+
+.choice input:checked + label{
+    background:var(--green);
+    color:white;
+    border-color:var(--green);
+}
+
+.form-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:22px;
+}
+
+.form-buttons button{
+    flex:1;
+}
+
+/* =========================
+   PROBLEMS
+========================= */
+
+.problems{
+    background:#fff;
+}
+
+.problem-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.problem-card{
+    border:1px solid var(--border);
+    padding:25px 20px;
+    border-radius:8px;
+    transition:.3s;
+    background:#fff;
+}
+
+.problem-card:hover{
+    border-color:#c8d7d0;
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.problem-icon{
+    font-size:27px;
+    margin-bottom:17px;
+}
+
+.problem-card h3{
+    color:var(--green);
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.problem-card p{
+    color:#7a8580;
+    font-size:11px;
+    line-height:1.6;
+}
+
+/* =========================
+   WHY
+========================= */
+
+.why{
+    background:var(--cream);
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.why-image{
+    height:480px;
+    border-radius:10px;
+    background:
+        linear-gradient(rgba(23,63,53,.05),rgba(23,63,53,.05)),
+        url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1000&q=85");
+    background-size:cover;
+    background-position:center;
+}
+
+.why-text small{
+    color:var(--orange);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.why-text h2{
+    color:var(--green);
+    font-family:'Manrope',sans-serif;
+    font-size:40px;
+    letter-spacing:-1.5px;
+    margin:12px 0 20px;
+}
+
+.why-text>p{
+    color:var(--gray);
+    line-height:1.8;
+    font-size:14px;
+}
+
+.why-list{
+    margin-top:25px;
+}
+
+.why-item{
+    display:flex;
+    gap:13px;
+    margin:18px 0;
+}
+
+.why-check{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:#dcebe4;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.why-item strong{
+    color:var(--green);
+    font-size:13px;
+}
+
+.why-item p{
+    color:#7a8580;
+    font-size:11px;
+    margin-top:3px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process{
+    background:white;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    text-align:center;
+    padding:15px;
+}
+
+.process-number{
+    width:52px;
+    height:52px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:var(--green);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+}
+
+.process-card h3{
+    color:var(--green);
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#77827d;
+    font-size:11px;
+    line-height:1.6;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews{
+    background:var(--cream);
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    background:#fff;
+    padding:27px;
+    border-radius:8px;
+}
+
+.review .stars{
+    font-size:13px;
+}
+
+.review p{
+    color:#56625d;
+    font-size:13px;
+    line-height:1.7;
+    margin:15px 0;
+}
+
+.reviewer{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.avatar{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#dcebe4;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--green);
+    font-weight:bold;
+}
+
+.reviewer strong{
+    color:var(--green);
+    font-size:12px;
+}
+
+.reviewer span{
+    color:#89928e;
+    font-size:10px;
+    display:block;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:var(--green);
+    font-weight:700;
+    font-size:14px;
+    text-align:left;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 30px 20px 0;
+    color:#717c77;
+    line-height:1.7;
+    font-size:12px;
+}
+
+.faq-item.open .faq-answer{
+    display:block;
+}
+
+.faq-plus{
+    font-size:22px;
+    font-weight:400;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#102d25;
+    color:white;
+    padding:65px 25px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.7fr 1fr 1fr 1.2fr;
+    gap:50px;
+}
+
+.footer-logo{
+    font-family:'Manrope',sans-serif;
+    font-size:25px;
+    font-weight:800;
+    color:#fff;
+}
+
+.footer-logo span{
+    color:var(--orange2);
+}
+
+.footer-about{
+    color:#aebdb7;
+    font-size:12px;
+    line-height:1.8;
+    max-width:300px;
+    margin-top:15px;
+}
+
+.footer-title{
+    color:white;
+    font-size:12px;
+    margin-bottom:18px;
+    letter-spacing:1px;
+}
+
+.footer a{
+    display:block;
+    color:#aebdb7;
+    font-size:11px;
+    margin:11px 0;
+}
+
+.footer a:hover{
+    color:white;
+}
+
+.footer-contact{
+    color:#aebdb7;
+    font-size:11px;
+    line-height:2;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:45px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    display:flex;
+    justify-content:space-between;
+    color:#84938d;
+    font-size:10px;
+}
+
+/* =========================
+   CART SIDEBAR
+========================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.4);
+    z-index:1999;
+    display:none;
+}
+
+.overlay.active{
+    display:block;
+}
+
+.cart-sidebar{
+    position:fixed;
+    top:0;
+    right:-430px;
+    width:410px;
+    max-width:94%;
+    height:100vh;
+    background:white;
+    z-index:2000;
+    box-shadow:-10px 0 40px rgba(0,0,0,.15);
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+}
+
+.cart-sidebar.active{
+    right:0;
+}
+
+.cart-head{
+    padding:22px;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.cart-head h3{
+    color:var(--green);
+}
+
+.close{
+    border:none;
+    background:none;
+    font-size:24px;
+}
+
+.cart-items{
+    flex:1;
+    overflow:auto;
+    padding:20px;
+}
+
+.empty-cart{
+    text-align:center;
+    color:#89938f;
+    padding:70px 20px;
+    font-size:13px;
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:15px;
+    margin-bottom:15px;
+}
+
+.cart-item img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.cart-item h4{
+    color:var(--green);
+    font-size:13px;
+}
+
+.cart-item p{
+    color:#68746f;
+    font-size:11px;
+    margin:5px 0;
+}
+
+.remove-item{
+    background:none;
+    border:none;
+    color:#c86e50;
+    font-size:10px;
+}
+
+.cart-footer{
+    padding:20px;
+    border-top:1px solid var(--border);
+}
+
+.total{
+    display:flex;
+    justify-content:space-between;
+    color:var(--green);
+    font-weight:800;
+    font-size:19px;
+    margin-bottom:15px;
+}
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(12,28,23,.68);
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:900px;
+    max-width:100%;
+    max-height:90vh;
+    overflow:auto;
+    background:white;
+    border-radius:12px;
+    position:relative;
+}
+
+.modal-close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:none;
+    background:white;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    z-index:2;
+    font-size:20px;
+}
+
+.modal-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.modal-image{
+    min-height:480px;
+    background:#eee;
+}
+
+.modal-image img{
+    width:100%;
+    height:100%;
+    min-height:480px;
+    object-fit:cover;
+}
+
+.modal-info{
+    padding:45px 35px;
+}
+
+.modal-info small{
+    color:var(--orange);
+    letter-spacing:1px;
+    font-weight:800;
+}
+
+.modal-info h2{
+    color:var(--green);
+    font-family:'Manrope',sans-serif;
+    font-size:31px;
+    margin:10px 0;
+}
+
+.modal-info p{
+    color:#68746f;
+    font-size:13px;
+    line-height:1.8;
+    margin:15px 0;
+}
+
+.modal-price{
+    color:var(--green);
+    font-size:26px;
+    font-weight:800;
+    margin:25px 0;
+}
+
+/* =========================
+   COOKIE
+========================= */
+
+.cookie{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    max-width:430px;
+    background:white;
+    border:1px solid var(--border);
+    box-shadow:0 10px 35px rgba(0,0,0,.15);
+    border-radius:8px;
+    padding:18px;
+    z-index:5000;
+    display:none;
+}
+
+.cookie.show{
+    display:block;
+}
+
+.cookie p{
+    color:#65716c;
+    font-size:11px;
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.cookie button{
+    border:none;
+    background:var(--green);
+    color:white;
+    padding:9px 15px;
+    border-radius:4px;
+    font-size:11px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25d366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    z-index:1000;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding-top:70px;
+        padding-bottom:90px;
+    }
+
+    .hero-visual{
+        height:400px;
+    }
+
+    .personal-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:flex;
+        border:none;
+        background:none;
+        font-size:25px;
+        color:var(--green);
+    }
+
+    .nav-links.mobile-open{
+        display:flex;
+        position:absolute;
+        left:0;
+        right:0;
+        top:84px;
+        background:white;
+        padding:20px 25px;
+        flex-direction:column;
+        box-shadow:0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .trust{
+        grid-template-columns:1fr 1fr;
+        margin:0 20px;
+    }
+
+    .trust-item{
+        border-bottom:1px solid var(--border);
+    }
+
+    .category-grid,
+    .problem-grid,
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+}
+
+@media(max-width:550px){
+
+    .top-bar{
+        font-size:10px;
+    }
+
+    header{
+        height:72px;
+    }
+
+    .nav{
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .nav-links.mobile-open{
+        top:72px;
+    }
+
+    .hero-inner{
+        min-height:auto;
+        padding:70px 20px;
+    }
+
+    .hero-text h1{
+        font-size:43px;
+        letter-spacing:-2px;
+    }
+
+    .hero-text p{
+        font-size:14px;
+    }
+
+    .hero-visual{
+        height:320px;
+    }
+
+    .card-info{
+        right:0;
+    }
+
+    .card-rating{
+        left:0;
+    }
+
+    .trust,
+    .category-grid,
+    .problem-grid,
+    .process-grid,
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item{
+        border-right:none;
+    }
+
+    .section{
+        padding:70px 20px;
+    }
+
+    .section-head h2{
+        font-size:32px;
+    }
+
+    .personal-text h2{
+        font-size:34px;
+    }
+
+    .form-box{
+        padding:22px 17px;
+    }
+
+    .choice-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .modal-content{
+        grid-template-columns:1fr;
+    }
+
+    .modal-image,
+    .modal-image img{
+        min-height:250px;
+        height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    🚚 1.500 TL ve üzeri alışverişlerde ücretsiz kargo &nbsp; • &nbsp; Güvenli alışveriş &nbsp; • &nbsp; Uzman tabanlık çözümleri
+</div>
+
+
+<!-- HEADER -->
+<header>
+
+<div class="nav">
+
+    <a href="#anasayfa">
+        <div class="logo">
+            SENA<span>FOOD</span>
+            <span class="logo-sub">FOOT COMFORT & PERFORMANCE</span>
+        </div>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#anasayfa">Ana Sayfa</a></li>
+        <li><a href="#urunler">Ürünler</a></li>
+        <li><a href="#kisiyeozel">Kişiye Özel</a></li>
+        <li><a href="#problemler">Ayak Sağlığı</a></li>
+        <li><a href="#hakkimizda">Hakkımızda</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+
+    <div class="nav-actions">
+
+        <button class="icon-btn" onclick="openCart()" title="Sepet">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="mobile-menu" onclick="toggleMobileMenu()">
+            ☰
+        </button>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="anasayfa">
+
+<div class="hero-inner">
+
+    <div class="hero-text">
+
+        <small>AYAK SAĞLIĞI • KONFOR • PERFORMANS</small>
+
+        <h1>
+            Her Adımda
+            <span>Daha İyi Hisset.</span>
+        </h1>
+
+        <p>
+            Günlük yaşamdan spora kadar her adımınız için
+            doğru desteği sunan tabanlık çözümleri.
+            SENAFOOD ile ayaklarınızın ihtiyacına uygun
+            konforu keşfedin.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#urunler" class="btn btn-primary">
+                Ürünleri Keşfet →
+            </a>
+
+            <a href="#kisiyeozel" class="btn btn-orange">
+                Kişiye Özel Tabanlık
+            </a>
+
+        </div>
+
+        <div class="hero-note">
+
+            <div>
+                <strong>✓</strong>
+                Anatomik destek
+            </div>
+
+            <div>
+                <strong>✓</strong>
+                Günlük konfor
+            </div>
+
+            <div>
+                <strong>✓</strong>
+                Spor performansı
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-image"></div>
+
+        <div class="floating-card card-info">
+
+            <span>SENAFOOD</span>
+
+            <h4>Doğru Destek</h4>
+
+            <p>
+                Ayak yapınıza uygun
+                konfor ve destek.
+            </p>
+
+        </div>
+
+        <div class="floating-card card-rating">
+
+            <div class="stars">★★★★★</div>
+
+            <strong>Konfor odaklı tasarım</strong>
+
+            <p>
+                Her adımda daha iyi hissetmeniz için.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+<div class="trust">
+
+    <div class="trust-item">
+        <div class="trust-icon">🦶</div>
+        <div>
+            <strong>Anatomik Destek</strong>
+            <span>Ayak yapısına uyumlu</span>
+        </div>
+    </div>
+
+    <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <div>
+            <strong>Konfor</strong>
+            <span>Gün boyu rahatlık</span>
+        </div>
+    </div>
+
+    <div class="trust-item">
+        <div class="trust-icon">🏃</div>
+        <div>
+            <strong>Aktif Yaşam</strong>
+            <span>Spor için özel modeller</span>
+        </div>
+    </div>
+
+    <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <div>
+            <strong>Güvenli Alışveriş</strong>
+            <span>Kolay ve güvenli sipariş</span>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- KATEGORİLER -->
+<section class="section categories">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>İHTİYACINIZI SEÇİN</small>
+
+        <h2>Size Uygun Desteği Bulun</h2>
+
+        <p>
+            Günlük kullanım, spor veya ayak problemlerine
+            yönelik farklı tabanlık seçeneklerini keşfedin.
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <a class="category"
+           href="#urunler"
+           style="background-image:url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80')">
+
+            <div class="category-content">
+                <span>PERFORMANS</span>
+                <h3>Koşu & Spor</h3>
+            </div>
+
+        </a>
+
+
+        <a class="category"
+           href="#urunler"
+           style="background-image:url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80')">
+
+            <div class="category-content">
+                <span>GÜNLÜK</span>
+                <h3>Günlük Konfor</h3>
+            </div>
+
+        </a>
+
+
+        <a class="category"
+           href="#problemler"
+           style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80')">
+
+            <div class="category-content">
+                <span>DESTEK</span>
+                <h3>Ayak Problemleri</h3>
+            </div>
+
+        </a>
+
+
+        <a class="category"
+           href="#kisiyeozel"
+           style="background-image:url('https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=800&q=80')">
+
+            <div class="category-content">
+                <span>SİZE ÖZEL</span>
+                <h3>Kişiye Özel</h3>
+            </div>
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ÜRÜNLER -->
+<section class="section shop" id="urunler">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>SENAFOOD KOLEKSİYONU</small>
+
+        <h2>Öne Çıkan Ürünler</h2>
+
+        <p>
+            İhtiyacınıza göre geliştirilmiş tabanlık ve
+            destek ürünlerini keşfedin.
+        </p>
+
+    </div>
+
+
+    <div class="shop-toolbar">
+
+        <div class="filters">
+
+            <button class="filter-btn active"
+                    onclick="filterProducts('all',this)">
+                Tümü
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('daily',this)">
+                Günlük
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('sport',this)">
+                Spor
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('problem',this)">
+                Destek
+            </button>
+
+            <button class="filter-btn"
+                    onclick="filterProducts('child',this)">
+                Çocuk
+            </button>
+
+        </div>
+
+        <div class="product-count">
+            9 ürün
+        </div>
+
+    </div>
+
+
+    <div class="products" id="productGrid">
+
+
+        <!-- 1 -->
+
+        <article class="product"
+                 data-category="daily"
+                 data-name="SENAFOOD Comfort"
+                 data-price="1490"
+                 data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">ÇOK SATAN</span>
+
+                <button class="quick"
+                        onclick="showProduct(0)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                     alt="SENAFOOD Comfort">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">GÜNLÜK KULLANIM</span>
+
+                <h3>SENAFOOD Comfort</h3>
+
+                <p>
+                    Günlük kullanım için konfor ve
+                    anatomik destek.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.490 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Comfort',1490,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 2 -->
+
+        <article class="product"
+                 data-category="sport"
+                 data-name="SENAFOOD Run Pro"
+                 data-price="1890"
+                 data-image="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">SPOR</span>
+
+                <button class="quick"
+                        onclick="showProduct(1)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80"
+                     alt="SENAFOOD Run Pro">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">KOŞU</span>
+
+                <h3>SENAFOOD Run Pro</h3>
+
+                <p>
+                    Koşu sırasında destek ve konfor
+                    için tasarlanmıştır.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.890 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Run Pro',1890,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 3 -->
+
+        <article class="product"
+                 data-category="sport"
+                 data-name="SENAFOOD Active"
+                 data-price="1790"
+                 data-image="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">PERFORMANS</span>
+
+                <button class="quick"
+                        onclick="showProduct(2)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
+                     alt="SENAFOOD Active">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">AKTİF YAŞAM</span>
+
+                <h3>SENAFOOD Active</h3>
+
+                <p>
+                    Aktif yaşam ve spor aktiviteleri
+                    için destekleyici yapı.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.790 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Active',1790,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 4 -->
+
+        <article class="product"
+                 data-category="problem"
+                 data-name="SENAFOOD Arch Support"
+                 data-price="1590"
+                 data-image="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">DESTEK</span>
+
+                <button class="quick"
+                        onclick="showProduct(3)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=80"
+                     alt="Arch Support">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">AYAK KEMERİ</span>
+
+                <h3>SENAFOOD Arch Support</h3>
+
+                <p>
+                    Ayak kemeri bölgesine destek
+                    sağlamaya yardımcı olur.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.590 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Arch Support',1590,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 5 -->
+
+        <article class="product"
+                 data-category="problem"
+                 data-name="SENAFOOD Heel Comfort"
+                 data-price="1390"
+                 data-image="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">KONFOR</span>
+
+                <button class="quick"
+                        onclick="showProduct(4)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80"
+                     alt="Heel Comfort">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">TOPUK DESTEĞİ</span>
+
+                <h3>SENAFOOD Heel Comfort</h3>
+
+                <p>
+                    Topuk bölgesinde konfor ve
+                    destek amacıyla geliştirilmiştir.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.390 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Heel Comfort',1390,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 6 -->
+
+        <article class="product"
+                 data-category="child"
+                 data-name="SENAFOOD Junior"
+                 data-price="1190"
+                 data-image="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">ÇOCUK</span>
+
+                <button class="quick"
+                        onclick="showProduct(5)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&w=900&q=80"
+                     alt="SENAFOOD Junior">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">ÇOCUK</span>
+
+                <h3>SENAFOOD Junior</h3>
+
+                <p>
+                    Çocukların günlük kullanımına
+                    yönelik destekleyici tabanlık.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.190 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Junior',1190,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 7 -->
+
+        <article class="product"
+                 data-category="sport"
+                 data-name="SENAFOOD Football"
+                 data-price="1990"
+                 data-image="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">FUTBOL</span>
+
+                <button class="quick"
+                        onclick="showProduct(6)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80"
+                     alt="Football">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">SPOR</span>
+
+                <h3>SENAFOOD Football</h3>
+
+                <p>
+                    Futbolcular için hareket ve
+                    destek odaklı tabanlık.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.990 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Football',1990,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 8 -->
+
+        <article class="product"
+                 data-category="sport"
+                 data-name="SENAFOOD Outdoor"
+                 data-price="1850"
+                 data-image="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">OUTDOOR</span>
+
+                <button class="quick"
+                        onclick="showProduct(7)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=900&q=80"
+                     alt="Outdoor">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">OUTDOOR</span>
+
+                <h3>SENAFOOD Outdoor</h3>
+
+                <p>
+                    Uzun yürüyüş ve outdoor
+                    aktiviteleri için destek.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.850 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Outdoor',1850,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 9 -->
+
+        <article class="product"
+                 data-category="daily"
+                 data-name="SENAFOOD Everyday"
+                 data-price="1290"
+                 data-image="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80">
+
+            <div class="product-image">
+
+                <span class="badge">GÜNLÜK</span>
+
+                <button class="quick"
+                        onclick="showProduct(8)">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80"
+                     alt="Everyday">
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">GÜNLÜK</span>
+
+                <h3>SENAFOOD Everyday</h3>
+
+                <p>
+                    Günlük ayakkabılar için
+                    hafif ve konforlu destek.
+                </p>
+
+                <div class="product-bottom">
+
+                    <span class="price">1.290 TL</span>
+
+                    <button class="add-cart"
+                            onclick="addToCart('SENAFOOD Everyday',1290,this)">
+                        Sepete Ekle
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- KİŞİYE ÖZEL -->
+<section class="section personal" id="kisiyeozel">
+
+<div class="container">
+
+<div class="personal-grid">
+
+    <div class="personal-text">
+
+        <small>KİŞİYE ÖZEL ORTOPEDİK TABANLIK</small>
+
+        <h2>
+            Çünkü Her Ayak
+            Birbirinden Farklı.
+        </h2>
+
+        <p>
+            Ayak yapınız, kullanım amacınız ve ihtiyaçlarınız
+            doğrultusunda size uygun tabanlık çözümünü
+            oluşturmak için bilgilerinizi adım adım alıyoruz.
+        </p>
+
+        <div class="personal-points">
+
+            <div class="personal-point">
+                <span class="check">✓</span>
+                Kişisel bilgilerinize göre değerlendirme
+            </div>
+
+            <div class="personal-point">
+                <span class="check">✓</span>
+                Ayakkabı ve ayak ölçülerinin alınması
+            </div>
+
+            <div class="personal-point">
+                <span class="check">✓</span>
+                Kullanım amacının belirlenmesi
+            </div>
+
+            <div class="personal-point">
+                <span class="check">✓</span>
+                İhtiyaca uygun tabanlık önerisi
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="form-box">
+
+        <div class="form-progress">
+
+            <div class="progress-step active" id="p1">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="p2">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="p3">3</div>
+
+        </div>
+
+
+        <!-- STEP 1 -->
+
+        <div class="form-step active" id="step1">
+
+            <h3>Kişisel Bilgiler</h3>
+
+            <p>
+                Öncelikle sizi biraz tanıyalım.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="field">
+                    <label>Ad</label>
+                    <input type="text" id="ad" placeholder="Adınız">
+                </div>
+
+                <div class="field">
+                    <label>Soyad</label>
+                    <input type="text" id="soyad" placeholder="Soyadınız">
+                </div>
+
+                <div class="field">
+                    <label>Telefon</label>
+                    <input type="tel" id="formTelefon" placeholder="05XX XXX XX XX">
+                </div>
+
+                <div class="field">
+                    <label>E-posta</label>
+                    <input type="email" id="formEmail" placeholder="ornek@mail.com">
+                </div>
+
+                <div class="field">
+                    <label>Yaş</label>
+                    <input type="number" id="yas" min="1" max="100" placeholder="Yaşınız">
+                </div>
+
+                <div class="field">
+                    <label>Cinsiyet</label>
+
+                    <select id="cinsiyet">
+                        <option value="">Seçiniz</option>
+                        <option>Kadın</option>
+                        <option>Erkek</option>
+                        <option>Belirtmek istemiyorum</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-buttons">
+
+                <button class="btn btn-orange"
+                        onclick="nextStep(2)">
+                    Devam Et →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="form-step" id="step2">
+
+            <h3>Ayak Bilgileriniz</h3>
+
+            <p>
+                Ayak yapınızı daha iyi anlayabilmemiz için
+                aşağıdaki bilgileri doldurun.
+            </p>
+
+            <div class="form-grid">
+
+                <div class="field full">
+
+                    <label>Ayakkabı Numarası</label>
+
+                    <select id="ayakkabi">
+                        <option value="">Seçiniz</option>
+                        <option>35</option>
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                        <option>44</option>
+                        <option>45</option>
+                        <option>46</option>
+                        <option>47</option>
+                    </select>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Sol Ayak Numarası</label>
+
+                    <input type="text"
+                           id="solAyak"
+                           placeholder="Örn. 41">
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Sağ Ayak Numarası</label>
+
+                    <input type="text"
+                           id="sagAyak"
+                           placeholder="Örn. 41">
+
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Ark Yüksekliği</label>
+
+                <div class="choice-grid">
+
+                    <div class="choice">
+                        <input type="radio"
+                               name="ark"
+                               id="ark1"
+                               value="Düşük">
+                        <label for="ark1">Düşük</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio"
+                               name="ark"
+                               id="ark2"
+                               value="Orta">
+                        <label for="ark2">Orta</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio"
+                               name="ark"
+                               id="ark3"
+                               value="Yüksek">
+                        <label for="ark3">Yüksek</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Kullanıcı Problemi</label>
+
+                <div class="choice-grid">
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="İçe basma" id="pb1">
+                        <label for="pb1">İçe basma</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Dışa basma" id="pb2">
+                        <label for="pb2">Dışa basma</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Düz taban" id="pb3">
+                        <label for="pb3">Düz taban</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Topuk ağrısı" id="pb4">
+                        <label for="pb4">Topuk ağrısı</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Ön ayak ağrısı" id="pb5">
+                        <label for="pb5">Ön ayak</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Diz problemi" id="pb6">
+                        <label for="pb6">Diz</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Bel problemi" id="pb7">
+                        <label for="pb7">Bel</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="problem" value="Yok / sadece konfor" id="pb8">
+                        <label for="pb8">Sadece konfor</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <button class="btn btn-outline"
+                        onclick="nextStep(1)">
+                    ← Geri
+                </button>
+
+                <button class="btn btn-orange"
+                        onclick="nextStep(3)">
+                    Devam Et →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="form-step" id="step3">
+
+            <h3>Kullanım Amacınız</h3>
+
+            <p>
+                Tabanlığınızı en çok hangi amaçla kullanacağınızı seçin.
+            </p>
+
+
+            <div class="field">
+
+                <label>Kullanım</label>
+
+                <div class="choice-grid">
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Günlük" id="u1">
+                        <label for="u1">Günlük</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Koşu" id="u2">
+                        <label for="u2">Koşu</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Futbol" id="u3">
+                        <label for="u3">Futbol</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Basketbol" id="u4">
+                        <label for="u4">Basketbol</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Tenis" id="u5">
+                        <label for="u5">Tenis</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Bisiklet" id="u6">
+                        <label for="u6">Bisiklet</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Outdoor" id="u7">
+                        <label for="u7">Outdoor</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="İş" id="u8">
+                        <label for="u8">İş</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="checkbox" name="usage" value="Çocuk" id="u9">
+                        <label for="u9">Çocuk</label>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label>Eklemek istediğiniz not</label>
+
+                <textarea
+                    id="not"
+                    rows="4"
+                    placeholder="Ayak yapınız veya kullanımınız hakkında eklemek istediğiniz bir bilgi varsa yazabilirsiniz."></textarea>
+
+            </div>
+
+
+            <div style="
+                background:#f3f7f5;
+                padding:14px;
+                border-radius:5px;
+                color:#66736d;
+                font-size:10px;
+                line-height:1.6;
+                margin-top:10px;
+            ">
+                ℹ️ Bu form bir ön değerlendirme talebidir.
+                Sağlık sorunları için doktor veya uzman değerlendirmesi
+                gerekebilir.
+            </div>
+
+
+            <div class="form-buttons">
+
+                <button class="btn btn-outline"
+                        onclick="nextStep(2)">
+                    ← Geri
+                </button>
+
+                <button class="btn btn-primary"
+                        onclick="submitPersonalForm()">
+                    Başvurumu Gönder ✓
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEMLER -->
+<section class="section problems" id="problemler">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>AYAK SAĞLIĞI</small>
+
+        <h2>Hangi İhtiyacınız Var?</h2>
+
+        <p>
+            Farklı kullanım ve ayak yapısı ihtiyaçlarına
+            yönelik ürünlerimizi inceleyin.
+        </p>
+
+    </div>
+
+
+    <div class="problem-grid">
+
+        <div class="problem-card">
+            <div class="problem-icon">🦶</div>
+            <h3>Düz Tabanlık</h3>
+            <p>
+                Ayak kemerini desteklemeye yönelik
+                ürün seçenekleri.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">↙️</div>
+            <h3>İçe Basma</h3>
+            <p>
+                Basış desteği ihtiyacı olan kullanıcılar
+                için seçenekler.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">↗️</div>
+            <h3>Dışa Basma</h3>
+            <p>
+                Farklı basış yapılarına yönelik
+                destek çözümleri.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">🎯</div>
+            <h3>Topuk Desteği</h3>
+            <p>
+                Topuk bölgesinde konfor ve destek
+                arayanlar için.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">⚽</div>
+            <h3>Spor Performansı</h3>
+            <p>
+                Futbol, basketbol ve diğer sporlar
+                için farklı modeller.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">🏃</div>
+            <h3>Koşu</h3>
+            <p>
+                Koşu sırasında konfor ve destek
+                odaklı ürünler.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">👣</div>
+            <h3>Plantar Destek</h3>
+            <p>
+                Ayak tabanı desteği ihtiyacına
+                yönelik seçenekler.
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">✨</div>
+            <h3>Sadece Konfor</h3>
+            <p>
+                Günlük kullanımda daha rahat
+                hissetmek isteyenler için.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- NEDEN SENAFOOD -->
+<section class="section why" id="hakkimizda">
+
+<div class="container">
+
+<div class="why-grid">
+
+    <div class="why-image"></div>
+
+    <div class="why-text">
+
+        <small>NEDEN SENAFOOD?</small>
+
+        <h2>
+            Her Adımınızı
+            Önemseyerek.
+        </h2>
+
+        <p>
+            SENAFOOD, ayak konforunu ve aktif yaşamı
+            bir araya getiren tabanlık çözümleri sunmak
+            amacıyla tasarlanmış bir markadır.
+        </p>
+
+        <div class="why-list">
+
+            <div class="why-item">
+                <div class="why-check">✓</div>
+                <div>
+                    <strong>İhtiyaca Odaklı</strong>
+                    <p>
+                        Günlük yaşamdan profesyonel spora kadar
+                        farklı kullanım senaryoları.
+                    </p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-check">✓</div>
+                <div>
+                    <strong>Kişiye Özel Yaklaşım</strong>
+                    <p>
+                        Kişiye özel tabanlık talebinde detaylı
+                        bilgi toplama süreci.
+                    </p>
+                </div>
+            </div>
+
+            <div class="why-item">
+                <div class="why-check">✓</div>
+                <div>
+                    <strong>Modern Tasarım</strong>
+                    <p>
+                        Konforu günlük hayatın içine taşıyan
+                        modern ürün anlayışı.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#kisiyeozel" class="btn btn-primary">
+            Kişiye Özel Başla →
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NASIL ÇALIŞIR -->
+<section class="section process">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>SENAFOOD DENEYİMİ</small>
+
+        <h2>Nasıl Çalışır?</h2>
+
+        <p>
+            Size uygun ürünü bulmak birkaç adımdan ibaret.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <div class="process-number">01</div>
+            <h3>İhtiyacınızı Belirleyin</h3>
+            <p>
+                Günlük yaşam, spor veya destek ihtiyacınızı seçin.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="process-number">02</div>
+            <h3>Ürününüzü Seçin</h3>
+            <p>
+                Size uygun tabanlık modelini keşfedin.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="process-number">03</div>
+            <h3>Siparişinizi Oluşturun</h3>
+            <p>
+                Ürünü sepete ekleyerek sipariş sürecini başlatın.
+            </p>
+        </div>
+
+        <div class="process-card">
+            <div class="process-number">04</div>
+            <h3>Adımlarınıza Konfor Katın</h3>
+            <p>
+                Yeni tabanlığınızı günlük hayatınıza dahil edin.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- YORUMLAR -->
+<section class="section reviews">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>SENAFOOD DENEYİMİ</small>
+
+        <h2>Kullanıcılarımız Ne Diyor?</h2>
+
+    </div>
+
+
+    <div class="review-grid">
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “Gün içerisinde uzun süre ayakta çalışıyorum.
+                Tabanlığı kullandıktan sonra ayakkabımın
+                içindeki konfor hissi gerçekten değişti.”
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">E</div>
+
+                <div>
+                    <strong>Emre K.</strong>
+                    <span>İstanbul</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “Koşu için aldığım model oldukça rahat.
+                Özellikle uzun antrenmanlarda ayağımın
+                daha dengeli hissetmesini sevdim.”
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">B</div>
+
+                <div>
+                    <strong>Burak A.</strong>
+                    <span>İzmir</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                “Kişiye özel tabanlık için formu doldurmak
+                çok kolaydı. Sürecin adım adım ilerlemesi
+                güven verici.”
+            </p>
+
+            <div class="reviewer">
+
+                <div class="avatar">S</div>
+
+                <div>
+                    <strong>Seda T.</strong>
+                    <span>İstanbul</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>MERAK EDİLENLER</small>
+
+        <h2>Sık Sorulan Sorular</h2>
+
+    </div>
+
+
+    <div class="faq">
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    onclick="toggleFaq(this)">
+                Hangi tabanlığı seçmeliyim?
+                <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+                Kullanım amacınıza göre seçim yapabilirsiniz.
+                Günlük kullanım, koşu, futbol, outdoor ve
+                farklı destek ihtiyaçları için farklı modeller
+                sunuyoruz. Emin değilseniz kişiye özel
+                değerlendirme formunu kullanabilirsiniz.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    onclick="toggleFaq(this)">
+                Kişiye özel tabanlık nasıl alınır?
+                <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+                Kişiye özel bölümümüzde adım adım kişisel,
+                ayak ve kullanım bilgilerinizi doldurabilirsiniz.
+                Başvurunuz sonrasında sizinle iletişime geçilerek
+                süreç hakkında bilgi verilir.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    onclick="toggleFaq(this)">
+                Tabanlık bütün ayakkabılara uygun mudur?
+                <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+                Uygunluk ayakkabının iç hacmine, mevcut tabanına
+                ve seçilen tabanlık modeline göre değişebilir.
+                Ürün seçiminde ayakkabı yapınızı dikkate almanızı
+                öneriyoruz.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    onclick="toggleFaq(this)">
+                Sağlık problemim varsa tabanlık kullanabilir miyim?
+                <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+                Tabanlık seçimi kişisel ihtiyaçlara göre değişebilir.
+                Mevcut bir sağlık probleminiz veya devam eden bir
+                tedaviniz varsa ürün kullanmadan önce doktorunuzun
+                veya ilgili sağlık uzmanının görüşünü almanız önerilir.
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question"
+                    onclick="toggleFaq(this)">
+                Mağazanız nerede?
+                <span class="faq-plus">+</span>
+            </button>
+
+            <div class="faq-answer">
+                SENAFOOD mağazamız İzmir Bornova'dadır.
+                Detaylı iletişim bilgileri sayfanın altındaki
+                iletişim bölümünde yer almaktadır.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- İLETİŞİM -->
+<section class="section" id="iletisim" style="background:var(--cream);">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <small>İLETİŞİM</small>
+
+        <h2>Size Yardımcı Olalım</h2>
+
+        <p>
+            Ürünler, kişiye özel tabanlık veya mağazamız
+            hakkında bilgi almak için bizimle iletişime geçebilirsiniz.
+        </p>
+
+    </div>
+
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:18px;
+    ">
+
+        <div class="problem-card">
+            <div class="problem-icon">📍</div>
+            <h3>Mağaza</h3>
+            <p>
+                İzmir Bornova
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">📞</div>
+            <h3>Telefon</h3>
+            <p>
+                0552 308 25 38
+            </p>
+        </div>
+
+        <div class="problem-card">
+            <div class="problem-icon">✉️</div>
+            <h3>E-posta</h3>
+            <p>
+                senanurmtrc@gmail.com
+            </p>
+        </div>
+
+    </div>
+
+
+    <div style="
+        text-align:center;
+        margin-top:25px;
+        color:#718079;
+        font-size:12px;
+    ">
+        Çalışma saatleri: <strong style="color:#173f35;">
+        09.00 – 18.30
+        </strong>
+        &nbsp; • &nbsp;
+        Merkez: İstanbul
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+    <div>
+
+        <div class="footer-logo">
+            SENA<span>FOOD</span>
+        </div>
+
+        <p class="footer-about">
+            Her adımda daha iyi hissetmeniz için
+            günlük yaşamdan spora kadar farklı
+            tabanlık çözümleri sunuyoruz.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <div class="footer-title">ÜRÜNLER</div>
+
+        <a href="#urunler">Günlük Tabanlık</a>
+        <a href="#urunler">Spor Tabanlığı</a>
+        <a href="#urunler">Koşu Tabanlığı</a>
+        <a href="#urunler">Çocuk Tabanlığı</a>
+        <a href="#kisiyeozel">Kişiye Özel</a>
+
+    </div>
+
+
+    <div>
+
+        <div class="footer-title">SENAFOOD</div>
+
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#problemler">Ayak Sağlığı</a>
+        <a href="#kisiyeozel">Kişiye Özel</a>
+        <a href="#iletisim">İletişim</a>
+        <a href="#">Gizlilik Politikası</a>
+
+    </div>
+
+
+    <div>
+
+        <div class="footer-title">İLETİŞİM</div>
+
+        <div class="footer-contact">
+
+            İzmir Bornova<br>
+            0552 308 25 38<br>
+            senanurmtrc@gmail.com<br><br>
+            09.00 – 18.30
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    <span>
+        © 2026 SENAFOOD. Tüm hakları saklıdır.
+    </span>
+
+    <span>
+        Her Adımda Daha İyi Hisset.
+    </span>
+
+</div>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+
+<!-- CART -->
+<div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-head">
+
+        <h3>Sepetim</h3>
+
+        <button class="close" onclick="closeCart()">×</button>
+
+    </div>
+
+
+    <div class="cart-items" id="cartItems">
+
+        <div class="empty-cart">
+            Sepetiniz şu anda boş.
+            <br><br>
+            Beğendiğiniz ürünleri sepete ekleyin.
+        </div>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+        <div class="total">
+
+            <span>Toplam</span>
+
+            <span id="cartTotal">0 TL</span>
+
+        </div>
+
+        <button class="btn btn-primary"
+                style="width:100%;"
+                onclick="checkout()">
+            Siparişi Tamamla →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="productModal">
+
+<div class="modal-box">
+
+    <button class="modal-close"
+            onclick="closeProduct()">
+        ×
+    </button>
+
+    <div class="modal-content">
+
+        <div class="modal-image">
+
+            <img id="modalImage" src="" alt="">
+
+        </div>
+
+        <div class="modal-info">
+
+            <small>SENAFOOD</small>
+
+            <h2 id="modalTitle">
+                Ürün
+            </h2>
+
+            <p id="modalDescription">
+                Ürün açıklaması.
+            </p>
+
+            <div class="modal-price"
+                 id="modalPrice">
+                0 TL
+            </div>
+
+            <button class="btn btn-primary"
+                    id="modalAddButton"
+                    style="width:100%;">
+                Sepete Ekle
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- COOKIE -->
+<div class="cookie" id="cookie">
+
+    <p>
+        SENAFOOD web sitesinde deneyiminizi geliştirmek
+        için çerezlerden yararlanıyoruz.
+    </p>
+
+    <button onclick="acceptCookie()">
+        Anladım
+    </button>
+
+</div>
+
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/905523082538"
+   target="_blank"
+   title="WhatsApp">
+    ☎
+</a>
+
+
+<script>
+
+/* =========================
+   PRODUCTS
+========================= */
+
+const productData = [
+
+    {
+        name:"SENAFOOD Comfort",
+        price:1490,
+        image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+        description:"Günlük kullanım için konfor ve anatomik destek odaklı SENAFOOD Comfort tabanlık."
+    },
+
+    {
+        name:"SENAFOOD Run Pro",
+        price:1890,
+        image:"https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=900&q=80",
+        description:"Koşu ve aktif yaşam sırasında konfor ve destek için tasarlanmış performans tabanlığı."
+    },
+
+    {
+        name:"SENAFOOD Active",
+        price:1790,
+        image:"https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+        description:"Aktif yaşam ve spor aktivitelerinde kullanılmak üzere geliştirilmiş destekleyici tabanlık."
+    },
+
+    {
+        name:"SENAFOOD Arch Support",
+        price:1590,
+        image:"https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=80",
+        description:"Ayak kemeri bölgesinde destek ihtiyacı olan kullanıcılar için tasarlanmıştır."
+    },
+
+    {
+        name:"SENAFOOD Heel Comfort",
+        price:1390,
+        image:"https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=900&q=80",
+        description:"Topuk bölgesinde konfor ve destek amacıyla geliştirilmiş tabanlık."
+    },
+
+    {
+        name:"SENAFOOD Junior",
+        price:1190,
+        image:"https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&w=900&q=80",
+        description:"Çocukların günlük kullanımına yönelik destekleyici tabanlık."
+    },
+
+    {
+        name:"SENAFOOD Football",
+        price:1990,
+        image:"https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
+        description:"Futbol aktivitelerinde hareket ve destek odaklı kullanım için tasarlanmıştır."
+    },
+
+    {
+        name:"SENAFOOD Outdoor",
+        price:1850,
+        image:"https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=900&q=80",
+        description:"Uzun yürüyüşler ve outdoor aktiviteleri için destek ve konfor."
+    },
+
+    {
+        name:"SENAFOOD Everyday",
+        price:1290,
+        image:"https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80",
+        description:"Günlük ayakkabılar için hafif ve konforlu destek."
+    }
+
+];
+
+
+/* =========================
+   CART
+========================= */
+
+let cart = [];
+
+function addToCart(name,price,button){
+
+    cart.push({
+        name:name,
+        price:price
+    });
+
+    updateCart();
+
+    if(button){
+        const oldText=button.innerText;
+
+        button.innerText="✓ Eklendi";
+
+        setTimeout(()=>{
+            button.innerText=oldText;
+        },1000);
+    }
+
+    openCart();
+}
+
+
+function updateCart(){
+
+    const count=document.getElementById("cartCount");
+    const items=document.getElementById("cartItems");
+    const total=document.getElementById("cartTotal");
+
+    count.innerText=cart.length;
+
+    if(cart.length===0){
+
+        items.innerHTML=`
+            <div class="empty-cart">
+                Sepetiniz şu anda boş.
+                <br><br>
+                Beğendiğiniz ürünleri sepete ekleyin.
+            </div>
+        `;
+
+        total.innerText="0 TL";
+
+        return;
+    }
+
+
+    let totalPrice=0;
+
+    items.innerHTML="";
+
+    cart.forEach((item,index)=>{
+
+        totalPrice+=item.price;
+
+        items.innerHTML+=`
+
+            <div class="cart-item">
+
+                <div style="
+                    width:70px;
+                    height:70px;
+                    background:#f1eee8;
+                    border-radius:5px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:25px;
+                ">
+                    🦶
+                </div>
+
+                <div style="flex:1">
+
+                    <h4>${item.name}</h4>
+
+                    <p>${item.price.toLocaleString("tr-TR")} TL</p>
+
+                    <button
+                        class="remove-item"
+                        onclick="removeItem(${index})">
+                        Ürünü kaldır
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+    total.innerText=
+        totalPrice.toLocaleString("tr-TR")+" TL";
+}
+
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+}
+
+
+function openCart(){
+
+    document.getElementById("cartSidebar")
+        .classList.add("active");
+
+    document.getElementById("overlay")
+        .classList.add("active");
+
+}
+
+
+function closeCart(){
+
+    document.getElementById("cartSidebar")
+        .classList.remove("active");
+
+    document.getElementById("overlay")
+        .classList.remove("active");
+
+}
+
+
+function checkout(){
+
+    if(cart.length===0){
+
+        alert("Sepetiniz boş.");
+
+        return;
+    }
+
+    alert(
+        "Sipariş özelliği demo modundadır.\n\n" +
+        "Gerçek ödeme sistemi bağlandığında " +
+        "bu buton ödeme sayfasına yönlendirilebilir."
+    );
+
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+function filterProducts(category,button){
+
+    document.querySelectorAll(".filter-btn")
+        .forEach(btn=>{
+            btn.classList.remove("active");
+        });
+
+    button.classList.add("active");
+
+
+    document.querySelectorAll(".product")
+        .forEach(product=>{
+
+            if(category==="all"){
+
+                product.classList.remove("hidden");
+
+            }else{
+
+                if(product.dataset.category===category){
+
+                    product.classList.remove("hidden");
+
+                }else{
+
+                    product.classList.add("hidden");
+
+                }
+
+            }
+
+        });
+
+}
+
+
+/* =========================
+   PRODUCT MODAL
+========================= */
+
+function showProduct(index){
+
+    const product=productData[index];
+
+    document.getElementById("modalImage").src=
+        product.image;
+
+    document.getElementById("modalTitle").innerText=
+        product.name;
+
+    document.getElementById("modalDescription").innerText=
+        product.description;
+
+    document.getElementById("modalPrice").innerText=
+        product.price.toLocaleString("tr-TR")+" TL";
+
+    document.getElementById("modalAddButton").onclick=
+        function(){
+
+            addToCart(
+                product.name,
+                product.price,
+                null
+            );
+
+            closeProduct();
+
+        };
+
+    document.getElementById("productModal")
+        .classList.add("active");
+
+}
+
+
+function closeProduct(){
+
+    document.getElementById("productModal")
+        .classList.remove("active");
+
+}
+
+
+/* =========================
+   PERSONAL FORM
+========================= */
+
+function nextStep(step){
+
+    document.querySelectorAll(".form-step")
+        .forEach(el=>{
+            el.classList.remove("active");
+        });
+
+    document.getElementById("step"+step)
+        .classList.add("active");
+
+
+    document.querySelectorAll(".progress-step")
+        .forEach(el=>{
+            el.classList.remove("active");
+        });
+
+
+    for(let i=1;i<=step;i++){
+
+        document.getElementById("p"+i)
+            .classList.add("active");
+
+    }
+
+}
+
+
+function submitPersonalForm(){
+
+    const ad=document.getElementById("ad").value.trim();
+    const soyad=document.getElementById("soyad").value.trim();
+    const telefon=document.getElementById("formTelefon").value.trim();
+    const email=document.getElementById("formEmail").value.trim();
+
+
+    if(!ad || !soyad || !telefon || !email){
+
+        alert(
+            "Lütfen Ad, Soyad, Telefon ve E-posta alanlarını doldurun."
+        );
+
+        nextStep(1);
+
+        return;
+    }
+
+
+    const ark=document.querySelector(
+        'input[name="ark"]:checked'
+    );
+
+
+    const problems=[
+        ...document.querySelectorAll(
+            'input[name="problem"]:checked'
+        )
+    ].map(x=>x.value);
+
+
+    const usage=[
+        ...document.querySelectorAll(
+            'input[name="usage"]:checked'
+        )
+    ].map(x=>x.value);
+
+
+    console.log({
+
+        ad,
+        soyad,
+        telefon,
+        email,
+
+        yas:document.getElementById("yas").value,
+
+        cinsiyet:
+            document.getElementById("cinsiyet").value,
+
+        ayakkabi:
+            document.getElementById("ayakkabi").value,
+
+        solAyak:
+            document.getElementById("solAyak").value,
+
+        sagAyak:
+            document.getElementById("sagAyak").value,
+
+        ark:
+            ark ? ark.value : "",
+
+        problems,
+
+        usage,
+
+        not:
+            document.getElementById("not").value
+
+    });
+
+
+    alert(
+        "Başvurunuz alındı, "+ad+"!\n\n" +
+        "SENAFOOD ekibi verdiğiniz bilgiler üzerinden " +
+        "sizinle iletişime geçecektir."
+    );
+
+
+    document.getElementById("step3")
+        .querySelectorAll("input,textarea")
+        .forEach(el=>el.value="");
+
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+function toggleFaq(button){
+
+    const item=button.parentElement;
+
+    item.classList.toggle("open");
+
+    const plus=button.querySelector(".faq-plus");
+
+    plus.innerText=
+        item.classList.contains("open")
+        ? "−"
+        : "+";
+
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMobileMenu(){
+
+    document.getElementById("navLinks")
+        .classList.toggle("mobile-open");
+
+}
+
+
+/* =========================
+   COOKIE
+========================= */
+
+function acceptCookie(){
+
+    localStorage.setItem(
+        "senafood_cookie",
+        "accepted"
+    );
+
+    document.getElementById("cookie")
+        .classList.remove("show");
+
+}
+
+
+window.addEventListener("load",()=>{
+
+    if(
+        localStorage.getItem("senafood_cookie")
+        !=="accepted"
+    ){
+
+        setTimeout(()=>{
+
+            document.getElementById("cookie")
+                .classList.add("show");
+
+        },1200);
+
+    }
+
+});
+
+
+/* =========================
+   CLOSE MODAL ESC
+========================= */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closeProduct();
+        closeCart();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
